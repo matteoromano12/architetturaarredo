@@ -4,45 +4,131 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Architettura Arredo - Tiziana Romano</title>
+  <title>Tiziana Romano — Architettura &amp; Arredo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="Tiziana Romano, architetto. Progetti di architettura, interior design e ristrutturazione su misura.">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
+  <meta property="og:title" content="Tiziana Romano — Architettura & Arredo">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <meta property="og:image:alt" content="Tiziana Romano, architetto">
 
 </head>
 
 <body>
 
-  <div class="wrapper">
-    <header>
-      <div class="head-logo"><img src="img/logozia.png" alt="logo"></div>
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Chi siamo</a></li>
-          <li><a href="index.html">Cosa facciamo</a></li>
-          <li><a href="index.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </header>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
 
-    <section class="chi-siamo">
-      <div class="chi-siamo-titolo">Chi siamo</div>
-      <div class="chi-siamo-card">
-        <div class="chi-siamo-card-foto"></div>
-        <span class="chi-siamo-name">Tiziana Romano</span>
+  <header class="site-header">
+    <div class="head-logo"><a href="index.html"><img src="img/logozia.png" alt="Tiziana Romano — logo"></a></div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principale">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Apri il menu</span>
+    </button>
+    <nav class="menu" id="menu-principale">
+      <ul>
+        <li><a href="#chi-siamo">Chi sono</a></li>
+        <li><a href="#cosa-facciamo">Progetti</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Studio di architettura a Bologna</p>
+        <h1 class="hero-title">Tiziana<br>Romano</h1>
+        <p class="hero-tag">Spazi disegnati intorno a chi li abita. Architettura, interior design e ristrutturazioni su misura.</p>
+        <a class="btn btn-primary" href="#contatti">Parliamo del tuo progetto</a>
+      </div>
+      <div class="hero-media">
+        <img src="img/mawi.jpeg" alt="Progetto di Tiziana Romano" class="hero-media-foto">
       </div>
     </section>
-  </div>
 
+    <section class="chi-siamo" id="chi-siamo">
+      <div class="section-inner chi-siamo-grid">
+        <div class="chi-siamo-card">
+          <img src="img/mawi.jpeg" alt="Ritratto di Tiziana Romano" class="chi-siamo-card-foto">
+        </div>
+        <div class="chi-siamo-testo">
+          <p class="eyebrow">Chi sono</p>
+          <h2 class="chi-siamo-titolo">Tiziana Romano</h2>
+          <p class="chi-siamo-desc">
+            Dietro <b>Architettura Arredo</b> c'è Tiziana Romana. Laureata in archtettura a Firenze nel 2002 e iscritta all’ordine degli architetti. Una serie di professionisti coopera per dare un servizio ottimale, comprendente qualsiasi campo dell’arredo e dell’architettura: piastrellisti, muratori, posatori, decoraori...
+          </p>
+          <ul class="chi-siamo-stats">
+            <li><span class="stat-num">+X</span><span class="stat-label">anni di esperienza</span></li>
+            <li><span class="stat-num">Residenziale</span><span class="stat-label">Commerciale · Interior</span></li>
+            <li><span class="stat-num">Bologna</span><span class="stat-label">ed Emilia Romagna</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cosa-facciamo" id="cosa-facciamo">
+      <div class="section-inner">
+        <p class="eyebrow eyebrow-light">Progetti</p>
+        <h2 class="section-titolo">Cosa facciamo</h2>
+        <p class="section-intro">Operiamo nel campo dell'architettura spaziando in diversi settori.</p>
+
+        <div class="servizi-grid">
+          <article class="servizio-card">
+            <div class="servizio-img placeholder" data-label="Edilizia"></div>
+            <h3>Edilizia</h3>
+            <p>con esperienze acquisite per ciò che concerne Rilievi, Progettazione architettonica, schema impianto Elettrico, Ristrutturazione, Frazionamenti, Direzione Lavori, con conoscenza delle principali procedure autorizzative inerenti la realizzazione di interventi di edilizia privata, ad uso abitaivo e commerciale.</p>
+          </article>
+          <article class="servizio-card">
+            <div class="servizio-img placeholder" data-label="Commerciale"></div>
+            <h3>Commerciale</h3>
+            <p>Negozi, uffici e spazi per il lavoro, pensati per accogliere persone e raccontare un'identità.</p>
+          </article>
+          <article class="servizio-card">
+            <div class="servizio-img placeholder" data-label="Interior design"></div>
+            <h3>Interior design</h3>
+            <p>Arredo su misura, scelta dei materiali e cura del dettaglio per ambienti che durano nel tempo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contatti" id="contatti">
+      <div class="section-inner contatti-grid">
+        <div class="contatti-testo">
+          <p class="eyebrow eyebrow-light">Contatti</p>
+          <h2 class="section-titolo">Iniziamo a progettare</h2>
+          <p class="section-intro">Raccontami il tuo spazio e cosa vorresti che diventasse. Rispondo personalmente a ogni richiesta.</p>
+        </div>
+        <ul class="contatti-lista">
+          <li>
+            <span class="contatti-label">Email</span>
+            <a href="mailto:info@tizianaromano.it" class="contatti-valore">info@tizianaromano.it</a>
+          </li>
+          <li>
+            <span class="contatti-label">Telefono</span>
+            <a href="tel:+390000000000" class="contatti-valore">+39 000 000 0000</a>
+          </li>
+          <li>
+            <span class="contatti-label">Studio</span>
+            <span class="contatti-valore">Milano, Italia</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="anno"></span> Tiziana Romano — Architetto</p>
+  </footer>
 
   <script src="js/app.js"></script>
-
 </body>
 
 </html>
