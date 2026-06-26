@@ -52,3 +52,18 @@ nav {
 body {
   padding-top: 116px;
 }
+
+.chi-siamo-titolo {
+  font-size: 3rem;
+}
+
+.chi-siamo-card {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 15rem;
+}
+
+.chi-siamo-card-foto {
+  background-image: url("img/gianfi.jpeg");
+}
