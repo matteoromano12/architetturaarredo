@@ -14,6 +14,7 @@
   --espresso: #2B2622;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-zia: "Times New Roman", Times, serif;
   --header-h: 5.5rem;
   --max-width: 1180px;
 }
@@ -141,9 +142,22 @@ img {
   padding: 0 2.5rem;
 }
 
+
+.head-logo {
+  display: flex;
+  align-items: center;
+}
+
+
 .head-logo img {
   height: 3.4rem;
   width: auto;
+}
+
+.head-logo p {
+  color: white;
+  font-family: var(--font-zia);
+  font-size: 2rem;
 }
 
 .menu ul {
@@ -250,7 +264,7 @@ img {
 }
 
 .hero-title {
-  font-family: var(--font-display);
+  font-family: var(--font-zia);
   font-weight: 400;
   font-size: clamp(3.2rem, 8vw, 6.2rem);
   line-height: 0.98;
@@ -375,29 +389,8 @@ img {
   width: 100%;
   aspect-ratio: 4 / 3;
   border-radius: 2px;
-  position: relative;
-  background: linear-gradient(135deg, #4a4138, #5c4f42);
   overflow: hidden;
-}
-
-.servizio-img::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 23px, rgba(247,242,234,0.06) 23px, rgba(247,242,234,0.06) 24px),
-    repeating-linear-gradient(90deg, transparent, transparent 23px, rgba(247,242,234,0.06) 23px, rgba(247,242,234,0.06) 24px);
-}
-
-.servizio-img::after {
-  content: attr(data-label);
-  position: absolute;
-  bottom: 1rem;
-  left: 1.2rem;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--sand);
+  object-fit: cover;
 }
 
 .contatti {
@@ -538,4 +531,9 @@ a.contatti-valore:focus-visible {
   .hero-title {
     font-size: clamp(2.6rem, 12vw, 4rem);
   }
+}
+
+
+#menu-principale a {
+  font-family: var(--font-zia);
 }
