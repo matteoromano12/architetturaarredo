@@ -393,6 +393,200 @@ img {
   object-fit: cover;
 }
 
+.galleria {
+  padding: 6rem 0;
+  background-color: var(--plaster);
+  overflow: hidden;
+}
+
+.galleria .section-titolo,
+.galleria .eyebrow-light {
+  color: var(--walnut);
+}
+
+.galleria-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.galleria-track {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.3rem 0.3rem 0.8rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.galleria-track::-webkit-scrollbar {
+  display: none;
+}
+
+.galleria-item {
+  flex: 0 0 auto;
+  width: 280px;
+  scroll-snap-align: start;
+}
+
+.galleria-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 2px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.galleria-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.galleria-thumb:hover img,
+.galleria-thumb:focus-visible img {
+  transform: scale(1.06);
+}
+
+.galleria-arrow {
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid var(--sand);
+  background-color: var(--plaster);
+  color: var(--walnut);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.galleria-arrow svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.galleria-arrow:hover,
+.galleria-arrow:focus-visible {
+  background-color: var(--cotto);
+  color: var(--plaster);
+  border-color: var(--cotto);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(20, 17, 14, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: min(90vw, 1100px);
+  max-height: 88vh;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 76vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.lightbox-caption {
+  color: var(--plaster);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 242, 234, 0.4);
+  background: none;
+  color: var(--plaster);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  background-color: var(--cotto);
+  border-color: var(--cotto);
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 242, 234, 0.4);
+  background: none;
+  color: var(--plaster);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox-arrow svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.lightbox-arrow:hover,
+.lightbox-arrow:focus-visible {
+  background-color: var(--cotto);
+  border-color: var(--cotto);
+}
+
+.lightbox-arrow-prev {
+  left: 1rem;
+}
+
+.lightbox-arrow-next {
+  right: 1rem;
+}
+
 .contatti {
   padding: 6rem 0;
   background-color: var(--plaster);
@@ -530,6 +724,38 @@ a.contatti-valore:focus-visible {
 
   .hero-title {
     font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .galleria-item {
+    width: 74vw;
+  }
+
+  .galleria-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .galleria-arrow svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .lightbox-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .lightbox-arrow-prev {
+    left: 0.4rem;
+  }
+
+  .lightbox-arrow-next {
+    right: 0.4rem;
+  }
+
+  .lightbox-close {
+    top: 0.6rem;
+    right: 0.6rem;
   }
 }
 
