@@ -140,6 +140,7 @@ img {
   left: 0;
   z-index: 100;
   padding: 0 2.5rem;
+  height: 8rem;
 }
 
 
@@ -150,8 +151,9 @@ img {
 
 
 .head-logo img {
-  height: 3.4rem;
+  height: 7.3rem;
   width: auto;
+  margin: 25px;
 }
 
 .head-logo p {
@@ -167,11 +169,12 @@ img {
 
 .menu a {
   color: var(--plaster);
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   position: relative;
   padding-bottom: 0.3rem;
+  font-variant: small-caps;
 }
 
 .menu a::after {
