@@ -134,13 +134,16 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: var(--header-h);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   padding: 0 2.5rem;
   height: 8rem;
+  background-image: url("../img/header.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -230,17 +233,51 @@ img {
 
 .hero-media {
   position: relative;
-  overflow: hidden;
   align-self: center;
-  width: 70%;
-  max-width: 30rem;
-  aspect-ratio: 4 / 3;
-  margin: 0 4rem 0 0;
-  border-radius: 2px;
+  width: 78%;
+  max-width: 32rem;
+  aspect-ratio: 6 / 5;
+  margin: 1.6rem 5rem 0 0;
   animation: hero-fade 1s ease-out both;
 }
 
-.hero-media-foto {
+.hero-media::before {
+  content: "";
+  position: absolute;
+  left: -1.1rem;
+  bottom: -1.1rem;
+  width: 82%;
+  height: 82%;
+  border: 1px solid var(--cotto);
+  border-radius: 2px;
+}
+
+.hero-media-primary {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 82%;
+  height: 82%;
+  overflow: hidden;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.hero-media-secondary {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 46%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 6px solid var(--plaster);
+  box-shadow: 0 14px 34px rgba(43, 38, 34, 0.2);
+  z-index: 2;
+}
+
+.hero-media-primary img,
+.hero-media-secondary img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -672,9 +709,18 @@ a.contatti-valore:focus-visible {
 
   .hero-media {
     order: -1;
-    width: 60%;
-    max-width: 18rem;
-    margin: 2.4rem auto 0;
+    width: 72%;
+    max-width: 20rem;
+    margin: 2.8rem auto 0;
+  }
+
+  .hero-media::before {
+    left: -0.7rem;
+    bottom: -0.7rem;
+  }
+
+  .hero-media-secondary {
+    border-width: 4px;
   }
 
   .hero-content {
