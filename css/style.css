@@ -162,7 +162,7 @@ img {
 .head-logo p {
   color: white;
   font-family: var(--font-zia);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .menu ul {
@@ -274,10 +274,6 @@ img {
   border: 6px solid var(--plaster);
   box-shadow: 0 14px 34px rgba(43, 38, 34, 0.2);
   z-index: 2;
-}
-
-#architetturahead {
-  font-size: 5rem;
 }
 
 .hero-media-primary img,
