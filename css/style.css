@@ -276,6 +276,10 @@ img {
   z-index: 2;
 }
 
+#architetturahead {
+  font-size: large;
+}
+
 .hero-media-primary img,
 .hero-media-secondary img {
   width: 100%;
